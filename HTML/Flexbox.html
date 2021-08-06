@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header class="headerContainer">Welcome</header>
+    <div class="mainContainer">
+        <section class="mainContainer">
+            <article>
+                <h2>First article</h2>
+                <p>For a long time, the only reliable cross-browser compatible tool</p>
+            </article>
+            <article>
+                <h2>Second article</h2>
+                <p>Flexbox is a one-dimensional layout method for arranging items in rows</p>
+            </article>
+           
+        </section>
+        <sidebar class="sideBarItem sideBarLeftItem">...</sidebar>
+        <sidebar class="sideBarItem sideBarRightItem">...</sidebar>
+    </div>
+    <footer class="footerContainer">Thank You</footer>
+    <script type="text/javascript"></script>
+</body>
+</html>
+
+
+<style>
+    body { padding: 2em; }
+
+    .headerContainer {
+        display: flex;
+        flex-flow: column wrap;
+        align-content: center;
+        background: chocolate;
+        font-weight: bold;
+        padding: 80px;
+    }
+    .footerContainer {
+        display: flex;
+        flex-flow: column wrap;
+        align-content: center;
+        background: lightgreen;
+        font-weight: bold;
+        padding: 80px;
+      
+    }
+    .mainContainer {
+        display: flex;
+        flex-flow: row wrap;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .mainContentItem {
+        text-align: left;
+        background: deepskyblue;
+    }
+    article {
+        padding: 20px;
+        margin: 20px;
+        background: aqua;
+    }
+    .sideBarLeftItem { background: gold; }
+    .sideBarRightItem { background: hotpink; }
+
+    .sideBarItem { flex: 1 0 0; border: 0px solid green;}
+    .mainContentItem { flex: 3 0px;}
+    .sideBarLeftItem { order: 1; }
+    .mainContentItem { order: 2; }
+    .sideBarRightItem { order: 3;}
+</style>
+
